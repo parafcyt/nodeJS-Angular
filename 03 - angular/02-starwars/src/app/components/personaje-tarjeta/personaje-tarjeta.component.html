@@ -1,0 +1,28 @@
+<div class="card animated fadeIn fast" >
+  <img class="card-img-top" [src]="personaje.img" [alt]="personaje.nombre">
+    <div class="card-body">
+      <h5 class="card-title">{{personaje.nombre}}</h5>
+      <p class="card-text">{{personaje.bio.substr(0,150)}}...</p>
+      <div class="etiqueta">
+        <button type="button" class="btn btn-primary" (click)="verPersonaje()">+ info</button>
+      </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Primera Aparición: {{personaje.aparicion}}</small>
+    </div>
+</div>
+
+<!-- <div class="card animated fadeIn fast" >
+  <img class="card-img-top img-fluid" [src]="personaje.img" [alt]="personaje.nombre">
+  <div class="card-body">
+    <h4 class="card-title">{{ personaje.nombre }}</h4>
+    <p class="card-text"> {{ personaje.bio }} </p>
+    <p class="card-text"><small class="text-muted">{{ personaje.aparicion }}</small></p>
+
+    <button (click)="verPersonaje()"
+      type="button" class="btn btn-outline-primary btn-block">
+      Ver más...
+    </button>
+
+  </div>
+</div> -->

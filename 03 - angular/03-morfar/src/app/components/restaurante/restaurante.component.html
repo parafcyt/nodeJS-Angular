@@ -1,0 +1,30 @@
+<!-- <br>
+<h1 class="animated fadeIn">{{ restaurante.nombre | uppercase }} <small>- {{ restaurante.direccion }}</small></h1>
+<hr> -->
+<br>
+
+<div class="row animated fadeIn fast">
+
+  <div class="col-md-4">
+
+    <img [src]="restaurante.img" class="img-fluid" [alt]="restaurante.nombre">
+    
+
+  </div>
+
+  <div class="col-md-8">
+    <h3>{{ restaurante.nombre }} <small>- {{ restaurante.direccion }}</small> </h3>
+    <hr>
+    <p>
+      {{ restaurante.bio }}
+    </p>
+
+    <hr>
+
+    <p>Plato del día: {{ restaurante.platoDelDia }}</p> <br>
+
+    <button type="button" class="btn btn-danger" (click)="volver()">Regresar</button>
+
+  </div>
+
+</div>

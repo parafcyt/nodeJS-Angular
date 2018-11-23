@@ -1,0 +1,41 @@
+#formulario{
+   margin: auto; /*que se centre */
+   margin-top: 30px; /*margen arriba*/
+   text-align: left; /*texto a la izq*/
+   border: 1px solid #c6c2c2;
+   width: 550px;
+   height: 680px;
+   background-color: rgb(255,255,255); /*blanco*/
+}
+
+#titulo { /*donde dice formulario*/
+  text-align: center;
+  color: rgb(77, 77, 77);
+}
+
+body{
+  background-color: rgb(211, 215, 221);
+}
+
+.form-control { /*para acomodar los agujeros de completar los input*/
+  margin: auto;
+  width: 400px;
+}
+
+label{
+  margin-left: 60px;
+  color: rgb(73, 73, 73);
+}
+
+button{ /*botones aceptar y cancelar*/
+  width: 110px;
+  text-align: center;
+}
+
+#cancelar {
+  margin-left: 225px;
+}
+
+#aceptar {
+  margin-left: 10px;
+}

@@ -1,0 +1,28 @@
+<!-- <div class="card-columns">
+  <div *ngFor="let personaje of infoPersonajes; let i = index" class="card border-secondary" style="width: 25rem;">
+    <img class="card-img-top" src="{{personaje.img}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{personaje.nombre}}</h5>
+      <p class="card-text">{{personaje.bio.substr(0,150)}}...</p>
+      <div class="etiqueta">
+        <a type="button" class="btn btn-primary" (click)="verHeroe()">+ info</a>
+      </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Primera Aparición: {{personaje.aparicion}}</small>
+    </div>
+  </div>
+</div>
+<br><br> -->
+
+<h1>Star Wars <small>Personajes</small></h1>
+<hr>
+
+
+<div class="card-columns">
+
+<!-- *ngFor="let heroe of heroes; let i = index" -->
+  <app-personaje-tarjeta (personajeSeleccionado)="verPersonaje( $event )" [personaje]="foo" [index]="i"  *ngFor="let foo of personajes; let i = index"></app-personaje-tarjeta>
+
+
+</div>

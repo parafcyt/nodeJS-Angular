@@ -1,0 +1,31 @@
+.form-control:focus {
+    border-color: rgb(228, 125, 125);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.img-thumbnail{
+  max-width: 250px;
+  max-height: 250px;
+  vertical-align: middle;
+}
+
+.col{
+  max-width: 250px;
+}
+
+.text-muted{
+  text-align: center;
+  letter-spacing: 0.15em;
+}
+
+.etiqueta{
+  text-align: right;
+}
+
+.row{
+  height: 250px;
+}
+
+.card-body{
+  max-height: 150px;
+}

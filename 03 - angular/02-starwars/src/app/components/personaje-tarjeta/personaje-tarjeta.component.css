@@ -1,0 +1,17 @@
+.etiqueta{
+    text-align: right;
+}
+
+.card-columns{
+    text-align: center;
+}
+
+.card{
+    text-align: left;
+}
+
+.card-footer{
+    text-align: center;
+    letter-spacing: 0.15em;
+}
+

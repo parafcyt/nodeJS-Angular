@@ -1,0 +1,45 @@
+
+<div class="container">
+  <br> <br>
+  <!-- Buscador -->
+  <div class="input-group mb-3 input-group-lg">
+      <input type="text" class="form-control" placeholder="¿Qué querés comer?" aria-describedby="button-addon2" (keyup.enter)="buscar(buscarTexto.value)" #buscarTexto>
+      <div class="input-group-append">
+        <button class="btn btn-danger" type="button" id="button-addon2" (click)="buscar(buscarTexto.value)">Buscar</button>
+      </div>
+    </div>
+</div>
+
+<br> <br>
+
+<!-- aca se muestran las comidas -->
+<div class="container">
+
+    <div class="card border-danger mb-3" style="max-width: 100rem;" *ngFor="let res of restaurantes; let i = index">
+
+      <div class="row">
+        <div class="col">
+            <img class="img-thumbnail" src="{{res.img}}" alt="Card image cap">
+        </div>
+        <div class="col-sm">
+            <div class="card-header">{{ res.nombre }}</div>
+
+            <div class="card-body">
+
+              <h5 class="card-title">Plato del día: {{ res.platoDelDia }}</h5>
+
+              <small class="text-muted">Dirección: {{ res.direccion }}</small>
+
+              <br>
+              Bio: 
+              {{ res.bio.substr(0,100) }}...
+
+              <div class="etiqueta">
+                  <button type="button" class="btn btn-danger" (click)="ver(i)">+ info</button>
+              </div>          
+
+            </div>
+        </div>
+      </div>
+    </div>  
+</div>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es" >
+  <head>
+
+    <meta charset="utf-8">
+    <title>Ejercicio3 Formulario</title>
+    <!--lo que bajé de internet-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="ejercicio3.css"  />
+
+    <script>
+      function validar(){
+          var nb, ab,db,tb,mb =true //boolenos para verificar si estan llenos
+          //asigno a variables el elemento xid
+
+          if (nombre.value.length==0) {
+            nombre.className="form-control is-invalid";
+            nb=false;
+          }
+          else {
+            nombre.className="form-control is-valid";
+            nb=true;
+          }
+
+          if (apellido.value.length==0) {
+            apellido.className="form-control is-invalid";
+            ab=false;
+          }
+          else {
+            apellido.className="form-control is-valid";
+            ab=true;
+          }
+
+          if (direccion.value.length==0) {
+            direccion.className="form-control is-invalid";
+            ab=false;
+          }
+          else {
+            direccion.className="form-control is-valid";
+            db=true;
+          }
+
+          if (telefono.value.length==0) {
+            telefono.className="form-control is-invalid";
+            tb=false;
+          }
+          else {
+            telefono.className="form-control is-valid";
+            tb=true;
+          }
+
+          if (mail.value.length==0) {
+            mail.className="form-control is-invalid";
+            mb=false;
+          }
+          else {
+            mail.className="form-control is-valid";
+            mb=true;
+          }
+
+          if (nb && ab && db && tb && mb) {
+            swal({title: 'Se cargó correctamente', text: '¿Desea enviar el formulario?',
+                  icon: "success", buttons: true}).then((aceptar) => {if (aceptar) {
+                      document.formulario.submit();
+                  }})
+          }
+          else {
+            swal("Datos Incompletos", "Debe completar todos los campos", "error");
+          }
+
+      }
+
+    </script>
+
+    <script>
+      function cancela(){
+
+        nombre.value='';
+        apellido.value='';
+        direccion.value='';
+        telefono.value='';
+        mail.value='';
+
+        nombre.className='form-control';
+        apellido.className='form-control';
+        direccion.className='form-control';
+        telefono.className='form-control';
+        mail.className='form-control';
+
+      }
+
+    </script>
+
+  </head>
+
+  <body>
+    <!-- <script>
+      swal("Good job!", "You clicked the button!", "success");
+    </script> -->
+
+    <form class="shadow-lg p-3 mb-5 bg-white rounded"  id="formulario" name="formulario"> <!--Formulario con sombra -->
+<!-- data-toggle es un atributo dentro de Bootstrap JS que liga el elemento al tipo de funcionamiento que muestra -->
+      <div class="form-group", id="titulo">
+        <br />
+        <h2>Formulario</h2>
+      </div>
+      <div class="form-group">
+        <br/>
+        <label>Nombre</label><br/>
+        <input type="text" class="form-control" id="nombre" placeholder="Mona" /> <!--placeholder lo que dice en gris-->
+      </div> <!--from-control elegimos este xk es ancho y lo visual-->
+
+      <div class="form-group">
+        <label>Apellido</label><br/>
+        <input type="text" class="form-control" id="apellido" placeholder="Gobbi" /> <!--placeholder lo que dice en gris-->
+      </div>
+
+      <div class="form-group">
+        <label>Dirección</label><br/>
+        <input type="text" class="form-control" id="direccion" placeholder="Galarza 100" /> <!--placeholder lo que dice en gris-->
+      </div>
+
+       <div class="form-group"> <!--es la división -->
+        <label>Teléfono</label><br/>
+        <input type="text" class="form-control" id="telefono" placeholder="0344242222" /> <!--placeholder lo que dice en gris-->
+      </div>
+
+      <div class="form-group">
+        <label>E-mail</label><br/>
+        <input type="email" class="form-control" id="mail" placeholder="mona@gmail.com" /> <!--placeholder lo que dice en gris-->
+      </div>
+
+      <div class="form-group">
+        <br />
+        <br />
+        <button id="cancelar" type="button" class="btn btn-danger" onclick="cancela()">Cancelar</button>
+        <button id="aceptar" type="button" class="btn btn-success" onclick="validar()">Aceptar</button>
+      </div>
+
+    </form>
+
+    <script>
+
+      var nombre = document.getElementById('nombre')
+      var apellido = document.getElementById('apellido')
+      var direccion = document.getElementById('direccion')
+      var telefono = document.getElementById('telefono')
+      var mail = document.getElementById('mail')
+
+    </script>
+
+  </body>
+</html>

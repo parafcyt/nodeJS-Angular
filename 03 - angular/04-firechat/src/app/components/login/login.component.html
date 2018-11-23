@@ -1,0 +1,50 @@
+<!-- 
+<div class="container">
+      
+<div class="container text-center">
+  <form class="form-signin" data-ember-action="2" (submit)="onSubmitAddUser()">
+    <h2 class="form-signin-heading">Sign in</h2>
+
+  <small class="text-muted">Ingresar a FireChat de Mona y Alexis</small>
+  <br><br>
+
+  <input [(ngModel)]="email" id="ember360" class="ember-view ember-text-field form-control login-input" placeholder="Email Address" type="text">
+  <br>
+  <input [(ngModel)]="password" id="ember361" class="ember-view ember-text-field form-control login-input-pass" placeholder="Password" type="password">
+ 
+  <button class="btn btn-lg btn-primary btn-block btn-center" type="submit" data-bindattr-3="3">Sign in</button>
+  <br>
+
+  <small class="text-muted">Or sign in with</small>
+  <br><br>
+  
+  <button class="btn btn-light btn-block btn-center" type="submit" data-bindattr-3="3">Google</button>
+  </form>
+</div> -->
+
+<div class="container text-center">
+  <form (submit)="ingresar()" class="formulario">
+    <h2 class="form-signin-heading">Sign in</h2>
+    <small class="text-muted">Ingresar a FireChat de Mona y Alexis</small>
+    <br><br>
+
+    <div class="form-group">
+      <input type="email" class="form-control" [(ngModel)]="email" name="email" placeholder="Enter email">
+    </div>
+
+    <div class="form-group">
+      <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="Password">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Ingresar</button> <br> <br>
+
+    <small class="text-muted">Or sign in with</small>
+    <br><br>
+
+    <button class="btn btn-light" type="submit" (click)="ingresarGoogle()">Google</button>
+
+    <button class="btn btn-light" type="submit" (click)="ingresarFacebook()">Facebook</button>
+
+  </form>
+</div>
+
